@@ -20,15 +20,6 @@ Full adder is a digital circuit used to calculate the sum of three binary bits. 
 
 Sum =A’B’Cin + A’BCin’ + ABCin + AB’Cin’ = A ⊕ B ⊕ Cin Carry = AB + ACin + BCin
 
- ![image](https://user-images.githubusercontent.com/36288975/163552156-a13e5a56-c638-4110-97d9-8896907c8d25.png)
-
-#### Figure -01 HALF ADDER 
-
-
-![image](https://user-images.githubusercontent.com/36288975/163552057-b3547877-6d07-45b4-b7e0-bcfebfad9e1d.png)
-
-#### Figure -02 FULL ADDER 
-
 ### Procedure
 
 Connect the supply (+5V) to the circuit
@@ -37,18 +28,43 @@ If the output is 1, then the led glows.
 ### 
 Program:
 /*
-Program to design a half adder and full adder circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
+HALF ADDER:
+module hh (a,b,s,c);
+input a,b;
+output s,c;
+xor(s,a,b);
+and(c,a,b);
+endmodule
+
+FULL ADDER:
+module hh (a,b,bin,diff,bout);
+input a,b,bin;
+output diff,bout;
+wire p,q,r,s,t;
+xor(p,a,b);
+not(q,a);
+and(r,q,b);
+xor(diff,p,bin);
+not(s,p);
+and(t,s,bin);
+or(bout,t,r);
+endmodule
+
+Developed by: KOUSALYA A.
+RegisterNumber:  212222230068
 */
-Logic symbol & Truthtable
-RTL realization
 
 ### Output:
-### RTL
-### TIMING DIAGRAM
+  HALF ADDER:
+  ![Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit](half adder.jpg)
+  ![Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit](half adder 1.jpg)
+
+  FULL ADDER:
+  ![Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit](full adder.jpg)
+  ![Exp-02-Implementation-of-Half-Adder-and-Full-Adder-circuit](full adder 1.jpg)
 
 
-### TRUTH TABLE 
+
 
 ### Result:
+Therefore using verilog programming in quartus for half adder and full adder circuit implemented successfully.
