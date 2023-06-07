@@ -28,6 +28,7 @@ If the output is 1, then the led glows.
 ### 
 Program:
 /*
+```
 HALF ADDER:
 module hh (a,b,s,c);
 input a,b;
@@ -47,6 +48,7 @@ and(e,ci,d);
 and(f,a,b);
 or(co,e,f);
 endmodule
+```
 
 Developed by: KOUSALYA A.
 RegisterNumber:  212222230068
